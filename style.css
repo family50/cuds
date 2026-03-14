@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@200;400;600&display=swap');
+
+:root {
+    --luxury-green: #004225; /* الأخضر الملكي العميق - Racing Green */
+    --gold-accent: #d4af37;  /* لمسة ذهبية بسيطة للساعات */
+    --pure-white: #ffffff;
+    --soft-gray: #f4f7f5;    /* رمادي مائل للأخضر خفيف جداً للخلفية */
+    --text-deep: #1a1a1a;
+    --border-color: #e0e6e2;
+    --shadow: rgba(0, 66, 37, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--soft-gray);
+    color: var(--text-deep);
+    min-height: 100vh;
+}
+
+.hero {
+    width: 85%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+/* Header Luxury */
+header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--luxury-green); /* العنوان بالأخضر الفخم */
+    letter-spacing: 10px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+header h2 {
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: var(--gold-accent); /* العنوان الفرعي بالذهبي كأنه شعار ساعة */
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+/* Inputs Styling */
+input {
+    width: 100%;
+    height: 60px;
+    background: var(--pure-white);
+    border: 1px solid var(--border-color);
+    border-radius: 4px; 
+    padding: 0 20px;
+    color: var(--text-deep);
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--luxury-green);
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+.price {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.price input { margin-bottom: 0; }
+
+#total {
+    height: 60px;
+    background: var(--luxury-green); /* التوتال باللون الأخضر المميز */
+    color: var(--pure-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    padding: 0 30px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    border-radius: 4px;
+}
+
+#total::before {
+    content: "TOTAL VALUATION";
+    font-size: 0.6rem;
+    margin-right: 15px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.7);
+}
+
+/* Luxury Button */
+button {
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    border: none;
+    background: var(--luxury-green);
+    color: var(--pure-white);
+    font-weight: 600;
+    letter-spacing: 3px;
+    transition: 0.4s;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #002d1a; /* درجة أغمق عند الهوفر */
+    box-shadow: 0 10px 25px rgba(0, 66, 37, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Search Area */
+.searchblock {
+    margin-top: 100px;
+    padding: 40px;
+    background: var(--pure-white);
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+}
+
+.btnsearch {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btnsearch button {
+    background: transparent;
+    border: 1px solid var(--luxury-green);
+    color: var(--luxury-green);
+    height: 45px;
+    font-size: 0.7rem;
+}
+
+.btnsearch button:hover {
+    background: var(--luxury-green);
+    color: #fff;
+}
+
+/* Table Design */
+table {
+    width: 100%;
+    margin-top: 50px;
+    border-collapse: collapse;
+
+}
+
+table th {
+    color: var(--luxury-green);
+    padding: 15px;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--luxury-green);
+}
+
+table tr {
+    background: var(--pure-white);
+    border-bottom: 1px solid var(--soft-gray);
+    transition: 0.3s;
+    
+}
+
+table tr:hover {
+    background: #f0f7f3; /* هوفر أخضر خفيف جداً للجدول */
+}
+
+table td {
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Action Buttons */
+#update, #delete {
+    height: 35px;
+    letter-spacing: 1px;
+    font-size: 0.65rem;
+    border-radius: 2px;
+}
+
+#delete { background: #fff1f0; color: #cf1322; border: 1px solid #ffa39e; }
+#delete:hover { background: #cf1322; color: #fff; }
+
+#update { background: #f6ffed; color: #389e0d; border: 1px solid #b7eb8f; }
+#update:hover { background: #389e0d; color: #fff; }
+
+/* Notification */
+#notification {
+    margin-top: 20px;
+    color: var(--luxury-green);
+    font-weight: 600;
+    
+}
+
+
+
+
+
+
+
+#deleateall{
+    margin-top: 50px;
+}
+
+
+
+
+
+/* تنسيق شريط التمرير بالكامل */
+::-webkit-scrollbar {
+    width: 8px; /* عرض شريط التمرير */
+}
+
+/* خلفية المسار الذي يتحرك فيه الشريط */
+::-webkit-scrollbar-track {
+    background: var(--soft-gray); 
+}
+
+/* الجزء المتحرك (المقبض) */
+::-webkit-scrollbar-thumb {
+    background: var(--luxury-green); 
+    border-radius: 10px; /* زوايا دائرية لجعله يبدو عصرياً */
+    border: 2px solid var(--soft-gray); /* يعطي مساحة وهمية حول المقبض لزيادة الأناقة */
+}
+
+/* شكل الشريط عند الضغط عليه أو تمرير الماوس */
+::-webkit-scrollbar-thumb:hover {
+    background: #002d1a; /* درجة أغمق قليلاً عند التفاعل */
+}
+
+/* للمتصفحات التي تدعم خاصية scrollbar-color (مثل Firefox) */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--luxury-green) var(--soft-gray);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design for 1050px and below */
+@media (max-width: 1050px) {
+    /* تصغير حجم العنوان الرئيسي */
+    header h1 {
+        font-size: 3.5rem; /* بدل 5rem */
+        letter-spacing: 6px; /* تقليل المسافات ليتناسب مع الحجم الجديد */
+    }
+
+    /* تقليل المسافات حول المحتوى الرئيسي */
+    .hero {
+        width: 90%; /* تكبير المساحة المستغلة من الصفحة */
+        padding: 40px 0;
+    }
+
+    /* تصغير حجم المدخلات قليلاً */
+    input {
+        height: 50px; /* بدل 60px */
+        margin-bottom: 15px;
+    }
+
+
+
+    /* زر الإضافة والمجموع */
+    button, #total {
+        height: 50px; /* بدل 60px */
+        font-size: 0.9rem;
+    }
+
+    /* تقليل الحشو في قسم البحث */
+    .searchblock {
+        margin-top: 60px;
+        padding: 25px;
+    }
+
+    /* جعل الجدول يدعم التمرير العرضي بشكل أفضل ومنع تكسر الكلمات */
+    table th, table td {
+        padding: 12px 8px; /* تقليل الفراغات داخل الخلايا */
+        font-size: 0.8rem; /* تصغير الخط لبيانات الجدول */
+    }
+}
+
+
+
+/* Mobile Design for 600px and below - Compact Mode */
+@media (max-width: 600px) {
+    /* تصغير العناوين لتناسب العرض الصغير */
+    header h1 {
+        font-size: 2.2rem;
+        letter-spacing: 4px;
+        margin-bottom: 10px;
+    }
+
+    header h2 {
+        font-size: 0.6rem;
+        letter-spacing: 3px;
+    }
+
+    /* تقليل الهوامش الجانبية للـ Hero */
+    .hero {
+        width: 95%;
+        padding: 30px 0;
+    }
+
+    /* الحفاظ على ترتيب Price Grid (تصغير الحقول فقط) */
+    .price {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* تصغير أقل عرض للخانة لتظل بجانب بعضها */
+        gap: 8px; /* تقليل المسافة بين الخانات */
+        margin-bottom: 15px;
+    }
+
+    input {
+        height: 45px; /* تقليل الارتفاع */
+        padding: 0 10px; /* تقليل الحشو الداخلي */
+        font-size: 0.8rem; /* تصغير الخط */
+        margin-bottom: 15px;
+    }
+
+    /* تصغير زر المجموع */
+    #total {
+        height: 45px;
+        font-size: 0.85rem;
+        padding: 0 15px;
+    }
+
+    #total::before {
+        content: "VAL:"; /* اختصار النص لتوفير مساحة */
+        margin-right: 5px;
+        letter-spacing: 1px;
+    }
+
+    /* تصغير الزر الرئيسي */
+    button {
+        height: 50px;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    /* منطقة البحث */
+    .searchblock {
+        margin-top: 40px;
+        padding: 20px 10px;
+    }
+
+    .btnsearch {
+        gap: 8px;
+    }
+
+    .btnsearch button {
+        height: 38px;
+        font-size: 0.65rem;
+    }
+
+    /* تصغير بيانات الجدول لضمان الرؤية */
+    table th, table td {
+        padding: 8px 4px;
+        font-size: 0.7rem;
+    }
+    
+    /* أزرار الجدول (Update/Delete) */
+    #update, #delete {
+        height: 28px;
+        width: 55px; /* تصغير عرض الأزرار داخل الجدول */
+        font-size: 0.55rem;
+    }
+}
