@@ -304,6 +304,14 @@ table td {
 
 
 
+
+
+
+
+
+
+
+
 /* Mobile Design for 600px and below - Compact Mode */
 @media (max-width: 600px) {
     /* تصغير العناوين لتناسب العرض الصغير */
@@ -386,3 +394,13 @@ table td {
         font-size: 0.55rem;
     }
 }
+
+
+
+
+
+
+
+
+
+
